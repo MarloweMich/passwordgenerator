@@ -5,19 +5,22 @@ const randomlower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
 const randomupper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 const randomnumber = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const specialchar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+"];
-var userinput = [];
-var finalpassword = [];
+
+
 
 function generatePassword() {
   console.log("Button was clicked. HUZZAH!")
   let chosenlength = prompt("Choose a character length from 8 to 128 for your password")
   console.log(chosenlength);
+  var finalpassword = [];
+  var userinput = [];
   {
     if (chosenlength < 8 || chosenlength > 128) {
       alert("Please choose a number ranging from 8 to 128");
       generatePassword();
     }
   };
+
   let uppercase = confirm("Include uppercase letters?");
   if (uppercase === true) {
     //push uppercase into userinput
@@ -43,13 +46,10 @@ function generatePassword() {
     userinput = userinput.concat(specialchar);
     console.log(userinput);
   };
-  //https://www.w3schools.com/js/js_loop_forof.asp
-  //https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_for_of
+  
   for (let i = 0; i < chosenlength; i++) {
     var index = Math.floor(Math.random() * userinput.length);
     finalpassword.unshift(userinput[index]);
-    
-
     console.log(finalpassword);
     //creating indiviual characters of final password
     //pushing each character into final password  
