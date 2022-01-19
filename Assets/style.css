@@ -164,6 +164,11 @@ button[disabled] {
   }
 }
 
+ .modal {
+   top: 35%;
+   left: 20%;
+ }
+
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
