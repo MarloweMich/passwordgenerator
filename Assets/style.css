@@ -87,7 +87,41 @@ header {
   text-align: center;
   cursor: pointer;
 }
+/* modal code begins here */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  align-content: center;
+  justify-content: center;
+  background-color: #f9fbfd;
+  padding: 20px;
+  border-radius: 25px;
+  border: black solid 3px;
+  
+}
 
+.modal-content {
+  text-align: left;
+  margin: auto;
+}
+
+.close {
+  color: grey;
+  top: 0;
+  float: right;
+  border: grey solid 2px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+  border: black solid 2px;
+}
+/* modal code ends here */
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
